@@ -5,6 +5,7 @@ import ProductCreate from '../views/ProductCreate.vue'
 import ProductUpdate from '../views/ProductUpdate.vue'
 import SalesList from '../views/SalesList.vue'
 import ImageInsert from '../views/ImageInsert.vue'
+import LoginView from '../views/LoginView.vue'
 
 const routes = [
   {
@@ -37,6 +38,12 @@ const routes = [
     name: 'ImageInsert',
     component: ImageInsert
   },
+  {
+    path: '/login',
+    name: 'LoginView',
+    component: LoginView
+  },
+  
 ]
 
 const router = createRouter({
