@@ -17,7 +17,7 @@
         <div class="col-xl-3 col-lg-4 col-md-6" v-for="(product, idx) in filteredProductList" v-bind:key="idx">
 
           <div class="card" style="width:18rem;" >
-            <a href="#">
+            <a @click="gotoDetail(product.id)" style="cursor:pointer">
               <img v-bind:src="`/download/${product.path}`" class="card-img-top" alt="제품사진" >
              
             </a>
@@ -69,6 +69,9 @@ export default {
 
   },
   methods: {
+    gotoDetail(product_id){
+      this.$router.push({path:'/detail', query:{id:product_id}});
+    }
     // sample3() {
     //   return '';
     // }
